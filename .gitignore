@@ -9,10 +9,13 @@
 *.mov
 *.avi
 
-# Imagens originais (manter apenas .webp otimizados)
+# Imagens originais e backups (manter apenas .webp otimizados)
 hero.jpg
 hero-mobile.jpg
+hero-mobile.png
+hero_old.webp
 logo.png
+*.png
 
 # Sistema operacional
 .DS_Store
