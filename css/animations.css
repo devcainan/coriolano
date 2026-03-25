@@ -1,0 +1,55 @@
+/* ============================================================
+   ANIMATIONS.CSS — Keyframes e transições
+   Guimarães & Coriolano Advocacia
+   ============================================================ */
+
+/* Pulse do botão WhatsApp */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  }
+  50% {
+    box-shadow: 0 4px 32px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.1);
+  }
+}
+
+/* Bounce do scroll indicator */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50% { transform: translateY(8px) translateX(-50%); }
+}
+
+/* Fade-in simples */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Slide-down (menu mobile) */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-up para mensagem de sucesso do form */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Spin suave */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,25 @@
+# Backups e arquivos temporários
+*.tar.gz
+*.zip
+*.bak
+*.tmp
+
+# Vídeos (arquivos grandes, não versionados)
+*.mp4
+*.mov
+*.avi
+
+# Imagens originais (manter apenas .webp otimizados)
+hero.jpg
+hero-mobile.jpg
+logo.png
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+*.swp
+*.swo

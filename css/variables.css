@@ -1,0 +1,60 @@
+/* ============================================================
+   VARIABLES.CSS — Tokens de design
+   Guimarães & Coriolano Advocacia
+   ============================================================ */
+
+:root {
+  /* === PALETA PRINCIPAL === */
+  --color-navy:       #0A1628;
+  --color-navy-mid:   #1A2E4A;
+  --color-navy-light: #243B55;
+  --color-gold:       #C9A84C;
+  --color-gold-light: #E2C97A;
+  --color-cream:      #F9F7F4;
+  --color-white:      #FFFFFF;
+  --color-text:       #1C1C1C;
+  --color-text-muted: #5A6475;
+  --color-border:     #E2DDD6;
+  --color-error:      #C0392B;
+  --color-success:    #27AE60;
+
+  /* === TIPOGRAFIA === */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Escala tipográfica */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+
+  /* === ESPAÇAMENTO === */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* === OUTROS === */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  16px;
+  --shadow-sm:  0 1px 3px rgba(10,22,40,0.08);
+  --shadow-md:  0 4px 16px rgba(10,22,40,0.12);
+  --shadow-lg:  0 8px 32px rgba(10,22,40,0.18);
+  --transition: 0.3s ease;
+  --container:  1200px;
+  --section-padding: var(--space-20) 0;
+}

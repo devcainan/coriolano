@@ -1,0 +1,193 @@
+/* ============================================================
+   LAYOUT.CSS — Grid, container, seções, responsividade
+   Guimarães & Coriolano Advocacia
+   ============================================================ */
+
+/* === CONTAINER === */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* === SEÇÕES === */
+section {
+  position: relative;
+}
+
+.section-padding {
+  padding: var(--space-20) 0;
+}
+
+.section-padding-lg {
+  padding: var(--space-24) 0;
+}
+
+/* === FUNDOS === */
+.bg-navy    { background-color: var(--color-navy); }
+.bg-navy-mid{ background-color: var(--color-navy-mid); }
+.bg-cream   { background-color: var(--color-cream); }
+.bg-white   { background-color: var(--color-white); }
+
+/* === TEXTOS === */
+.text-white { color: var(--color-white); }
+.text-gold  { color: var(--color-gold); }
+.text-navy  { color: var(--color-navy); }
+.text-muted { color: var(--color-text-muted); }
+.text-center{ text-align: center; }
+.text-left  { text-align: left; }
+
+/* === LABEL SECTION === */
+.section-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+}
+
+/* === LINHA DOURADA DECORATIVA === */
+.gold-line {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-gold);
+  margin: var(--space-4) 0;
+}
+
+.gold-line--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gold-line--lg {
+  width: 60px;
+}
+
+/* === TÍTULOS DE SEÇÃO === */
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-4xl);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.section-title--lg {
+  font-size: var(--text-5xl);
+}
+
+.section-title--white {
+  color: var(--color-white);
+}
+
+.section-title--navy {
+  color: var(--color-navy);
+}
+
+/* === GRIDS === */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+/* === FADE IN (IntersectionObserver) === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === PADRÃO DE TEXTURA DIAGONAL (hero) === */
+.texture-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(201,168,76,0.035) 0px,
+    rgba(201,168,76,0.035) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+  pointer-events: none;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-8);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-title {
+    font-size: var(--text-4xl);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-10);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .section-title {
+    font-size: var(--text-5xl);
+  }
+
+  .section-title--lg {
+    font-size: var(--text-6xl);
+  }
+}
+
+/* Wide */
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 var(--space-12);
+  }
+}

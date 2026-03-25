@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Guimarães & Coriolano Advocacia — Natal/RN</title>
+  <meta name="description" content="Entre em contato com o escritório Guimarães & Coriolano em Natal/RN. WhatsApp: (84) 9 9998-2433. Rua Walflan Galvão dos Santos, 1496 — Candelária, Natal/RN.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    /* Layout específico da página de contato */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    @media (min-width: 1024px) {
+      .contact-layout {
+        grid-template-columns: 3fr 2fr;
+        gap: var(--space-16);
+      }
+    }
+
+    .contact-form-wrap {
+      background-color: var(--color-white);
+      padding: var(--space-10) var(--space-10);
+      border: 1px solid var(--color-border);
+    }
+
+    @media (max-width: 600px) {
+      .contact-form-wrap {
+        padding: var(--space-6) var(--space-4);
+      }
+    }
+
+    .contact-info-wrap {
+      position: sticky;
+      top: 90px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo" aria-label="Guimarães & Coriolano Advocacia — Página inicial">
+          <img src="logo.webp" alt="Logo Guimarães & Coriolano">
+          <span class="header__logo-text">Guimarães &amp; Coriolano</span>
+        </a>
+        <nav class="header__nav" role="navigation" aria-label="Navegação principal">
+          <a href="index.html" class="header__nav-link">Início</a>
+          <a href="sobre.html" class="header__nav-link">Sobre</a>
+          <a href="areas.html" class="header__nav-link">Áreas de atuação</a>
+          <a href="contato.html" class="header__nav-link">Contato</a>
+        </nav>
+        <div class="header__cta">
+          <a href="https://api.whatsapp.com/send/?phone=5584999982433&text=Ol%C3%A1%2C+gostaria+de+entrar+em+contato+com+o+escrit%C3%B3rio+Guimar%C3%A3es+%26+Coriolano.+&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn-header-cta">Fale conosco</a>
+        </div>
+        <button class="header__hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <a href="index.html" class="mobile-menu__link">Início</a>
+    <a href="sobre.html" class="mobile-menu__link">Sobre</a>
+    <a href="areas.html" class="mobile-menu__link">Áreas de atuação</a>
+    <a href="contato.html" class="mobile-menu__link">Contato</a>
+    <a href="https://api.whatsapp.com/send/?phone=5584999982433&text=Ol%C3%A1%2C+gostaria+de+entrar+em+contato+com+o+escrit%C3%B3rio+Guimar%C3%A3es+%26+Coriolano.+&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="mobile-menu__cta btn">Fale conosco</a>
+  </div>
+
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Página de contato">
+      <div class="texture-overlay" aria-hidden="true"></div>
+      <div class="container" style="position: relative; z-index: 2;">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Início</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span>Contato</span>
+        </nav>
+        <h1 class="page-hero__title">Entre em Contato</h1>
+        <p class="page-hero__subtitle">Fale com o escritório Guimarães & Coriolano</p>
+      </div>
+    </section>
+
+
+    <!-- CONTATO PRINCIPAL -->
+    <section class="bg-cream section-padding" aria-label="Formulário e informações de contato">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- FORMULÁRIO -->
+          <div class="fade-in">
+            <div class="contact-form-wrap">
+
+              <div style="margin-bottom: var(--space-8);">
+                <span class="section-label">Envie uma mensagem</span>
+                <h2 class="section-title section-title--navy" style="font-size: var(--text-3xl); margin-bottom: var(--space-3);">
+                  Fale com nossa equipe
+                </h2>
+                <span class="gold-line" aria-hidden="true"></span>
+                <p style="color: var(--color-text-muted); margin-top: var(--space-4); font-size: var(--text-sm);">
+                  Preencha o formulário e retornaremos em breve pelo WhatsApp ou e-mail informado.
+                </p>
+              </div>
+
+              <!-- Formulário -->
+              <form id="contact-form" novalidate aria-label="Formulário de contato">
+
+                <div class="form-group">
+                  <label class="form-label" for="name">Nome completo *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Seu nome completo"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                    aria-describedby="name-error"
+                  >
+                  <span class="field-error" id="name-error" data-error="name" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="phone">Telefone / WhatsApp *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-input"
+                    placeholder="(84) 9 9999-9999"
+                    autocomplete="tel"
+                    required
+                    aria-required="true"
+                    aria-describedby="phone-error"
+                  >
+                  <span class="field-error" id="phone-error" data-error="phone" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email">E-mail *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="seu@email.com"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="email-error"
+                  >
+                  <span class="field-error" id="email-error" data-error="email" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="area">Área de interesse *</label>
+                  <select
+                    id="area"
+                    name="area"
+                    class="form-select"
+                    required
+                    aria-required="true"
+                    aria-describedby="area-error"
+                  >
+                    <option value="">Selecione uma área</option>
+                    <option value="previdenciario">Direito Previdenciário</option>
+                    <option value="trabalhista">Direito Trabalhista</option>
+                    <option value="civel">Direito Cível</option>
+                    <option value="outra">Outra</option>
+                  </select>
+                  <span class="field-error" id="area-error" data-error="area" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message">Descreva brevemente seu caso *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-textarea"
+                    placeholder="Conte-nos um pouco sobre sua situação e como podemos ajudar..."
+                    rows="5"
+                    required
+                    aria-required="true"
+                    aria-describedby="message-error"
+                  ></textarea>
+                  <span class="field-error" id="message-error" data-error="message" role="alert" aria-live="polite"></span>
+                </div>
+
+                <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; padding: 16px;">
+                  Enviar mensagem
+                </button>
+
+                <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-4); text-align: center;">
+                  Seus dados são confidenciais e protegidos.
+                </p>
+
+              </form>
+
+              <!-- Mensagem de sucesso -->
+              <div id="form-success" class="form-success" role="status" aria-live="polite">
+                <div class="form-success__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3 class="form-success__title">Mensagem enviada!</h3>
+                <p class="form-success__text">
+                  Recebemos sua mensagem com sucesso. Entraremos em contato em breve pelo WhatsApp ou e-mail informado. Obrigado!
+                </p>
+                <div style="margin-top: var(--space-8);">
+                  <a href="https://api.whatsapp.com/send/?phone=5584999982433&text=Ol%C3%A1%2C+gostaria+de+entrar+em+contato+com+o+escrit%C3%B3rio+Guimar%C3%A3es+%26+Coriolano.+&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn--primary">
+                    Ou fale agora pelo WhatsApp
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- INFORMAÇÕES DE CONTATO -->
+          <div class="contact-info-wrap fade-in" data-delay="150">
+
+            <div style="margin-bottom: var(--space-6);">
+              <span class="section-label">Informações</span>
+              <h2 class="section-title section-title--navy" style="font-size: var(--text-2xl); margin-bottom: var(--space-3);">
+                Onde nos encontrar
+              </h2>
+              <span class="gold-line" aria-hidden="true"></span>
+            </div>
+
+            <div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.07 6.07l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+                </div>
+                <div>
+                  <p class="contact-info-label">Telefone / WhatsApp</p>
+                  <p class="contact-info-value">
+                    <a href="tel:+5584999982433">(84) 9 9998-2433</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <p class="contact-info-label">E-mail</p>
+                  <p class="contact-info-value">
+                    <a href="mailto:hugo@coriolanoadvogados.com">hugo@coriolanoadvogados.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <p class="contact-info-label">Endereço</p>
+                  <p class="contact-info-value">
+                    Saint Yves Empresarial<br>
+                    Rua Walflan Galvão dos Santos, 1496 — Sala 17<br>
+                    Candelária, Natal/RN<br>
+                    CEP: 59.064-260
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <p class="contact-info-label">Horário de atendimento</p>
+                  <p class="contact-info-value">
+                    Segunda a Sexta: 8h às 18h<br>
+                    Sábado: 9h às 12h<br>
+                    <span style="font-size: var(--text-xs); color: var(--color-text-muted);">* Consultas pelo WhatsApp fora do horário podem ser agendadas</span>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Mapa Google Maps -->
+            <div class="map-embed" style="margin-top: var(--space-6);">
+              <iframe
+                src="https://maps.google.com/maps?cid=2956913582609514440&output=embed&hl=pt-BR"
+                width="100%"
+                height="240"
+                style="border:0; display:block;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização do escritório Guimarães & Coriolano"
+              ></iframe>
+              <a
+                href="https://www.google.com/maps?ll=-5.82951,-35.224603&z=17&t=m&hl=pt-BR&gl=US&mapclient=embed&cid=2956913582609514440"
+                target="_blank"
+                rel="noopener"
+                style="display:inline-block; margin-top: var(--space-2); font-size: var(--text-xs); color: var(--color-text-muted); transition: color var(--transition);"
+                onmouseover="this.style.color='var(--color-gold)'"
+                onmouseout="this.style.color='var(--color-text-muted)'"
+              >Abrir no Google Maps →</a>
+            </div>
+
+            <!-- WhatsApp direto -->
+            <div style="margin-top: var(--space-8); text-align: center;">
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-4);">Prefere falar diretamente?</p>
+              <a href="https://api.whatsapp.com/send/?phone=5584999982433&text=Ol%C3%A1%2C+gostaria+de+entrar+em+contato+com+o+escrit%C3%B3rio+Guimar%C3%A3es+%26+Coriolano.+&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn--primary" style="width: 100%; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.827L.057 23.928a.5.5 0 0 0 .614.614l6.064-1.463A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.01-1.373l-.36-.213-3.712.896.913-3.63-.234-.373A9.818 9.818 0 0 1 2.182 12C2.182 6.567 6.567 2.182 12 2.182c5.432 0 9.818 4.385 9.818 9.818 0 5.433-4.386 9.818-9.818 9.818z"/></svg>
+                Falar pelo WhatsApp
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="section-map" aria-label="Localização do escritório">
+    <div class="section-map__info">
+      <span class="section-label">Onde estamos</span>
+      <h2 class="section-map__title">Guimarães &amp; Coriolano Advocacia</h2>
+      <p class="section-map__address">Rua Walflan Galvão dos Santos, 1496 — Sala 17<br>Candelária, Natal/RN</p>
+      <a href="https://www.google.com/maps?ll=-5.82951,-35.224603&z=17&t=m&hl=pt-BR&gl=US&mapclient=embed&cid=2956913582609514440" target="_blank" rel="noopener" class="section-map__link">Abrir no Google Maps →</a>
+    </div>
+    <div class="section-map__embed">
+      <iframe
+        src="https://maps.google.com/maps?cid=2956913582609514440&output=embed&hl=pt-BR"
+        width="100%" height="100%" style="border:0; display:block;"
+        allowfullscreen loading="lazy"
+        title="Localização do escritório Guimarães & Coriolano"
+      ></iframe>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Guimarães &amp; Coriolano</p>
+          <p class="footer__brand-slogan">Justiça com compromisso e excelência.</p>
+          <p class="footer__brand-desc">Escritório de advocacia especializado em Direito Previdenciário, Trabalhista e Cível. Natal/RN, desde 2016.</p>
+          <div class="footer__social" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/guimaraescoriolanoadvocacia/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Links rápidos</p>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Início</a></li>
+            <li><a href="sobre.html" class="footer__link">Sobre o escritório</a></li>
+            <li><a href="areas.html" class="footer__link">Áreas de atuação</a></li>
+            <li><a href="contato.html" class="footer__link">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Áreas de atuação</p>
+          <ul class="footer__links">
+            <li><a href="areas.html#previdenciario" class="footer__link">Direito Previdenciário</a></li>
+            <li><a href="areas.html#trabalhista" class="footer__link">Direito Trabalhista</a></li>
+            <li><a href="areas.html#civel" class="footer__link">Direito Cível</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contato</p>
+          <div class="footer__contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.07 6.07l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+            <a href="tel:+5584999982433">(84) 9 9998-2433</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:hugo@coriolanoadvogados.com">hugo@coriolanoadvogados.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Rua Walflan Galvão dos Santos, 1496 — Sala 17, Candelária, Natal/RN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2024 Guimarães &amp; Coriolano Advocacia. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO WHATSAPP -->
+  <a href="https://api.whatsapp.com/send/?phone=5584999982433&text=Ol%C3%A1%2C+gostaria+de+entrar+em+contato+com+o+escrit%C3%B3rio+Guimar%C3%A3es+%26+Coriolano.+&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Fale conosco pelo WhatsApp">
+    <span class="whatsapp-btn__tooltip">Fale conosco</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.116.553 4.103 1.522 5.827L.057 23.928a.5.5 0 0 0 .614.614l6.064-1.463A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.01-1.373l-.36-.213-3.712.896.913-3.63-.234-.373A9.818 9.818 0 0 1 2.182 12C2.182 6.567 6.567 2.182 12 2.182c5.432 0 9.818 4.385 9.818 9.818 0 5.433-4.386 9.818-9.818 9.818z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
