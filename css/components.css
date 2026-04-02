@@ -714,76 +714,69 @@
    ============================================================ */
 .card-team {
   background-color: var(--color-white);
+  overflow: hidden;
   border: 1px solid var(--color-border);
-  padding: 40px 32px;
-  text-align: center;
-  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .card-team:hover {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
-.card-team__avatar-wrap {
+/* Foto portrait com suporte a overlay */
+.card-team__photo-wrap {
   position: relative;
-  display: inline-block;
-  margin-bottom: var(--space-4);
-}
-
-.card-team__avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--color-gold);
-  box-shadow: 0 0 0 6px rgba(201,168,76,0.1);
-}
-
-.card-team__avatar--sm {
-  width: 80px;
-  height: 80px;
-}
-
-.card-team__avatar-placeholder {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-color: var(--color-navy-mid);
-  border: 3px solid var(--color-gold);
-  box-shadow: 0 0 0 6px rgba(201,168,76,0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: var(--text-3xl);
-  color: rgba(201,168,76,0.6);
-}
-
-.card-team__avatar-placeholder--sm {
-  width: 80px;
-  height: 80px;
-  font-size: var(--text-xl);
-}
-
-.card-team__oab {
-  display: inline-block;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
   background-color: var(--color-navy);
-  color: var(--color-white);
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
-  padding: 4px 12px;
-  margin-bottom: var(--space-4);
-  letter-spacing: 0.05em;
 }
 
+.card-team__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(100%);
+  transition: filter 0.55s ease, transform 0.55s ease;
+  display: block;
+}
+
+.card-team:hover .card-team__photo {
+  filter: grayscale(0%) saturate(1.2);
+  transform: scale(1.04);
+}
+
+/* Overlay gradiente sobre a foto */
+.card-team__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-10) var(--space-4) var(--space-4) var(--space-4);
+  background: linear-gradient(to top, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.55) 55%, transparent 100%);
+}
+
+/* OAB dentro do overlay */
+.card-team__oab {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-1);
+}
+
+/* Nome dentro do overlay */
 .card-team__name {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: var(--text-2xl);
-  color: var(--color-navy);
+  color: var(--color-white);
+  line-height: 1.2;
   margin-bottom: var(--space-2);
 }
 
@@ -791,28 +784,42 @@
   font-size: var(--text-xl);
 }
 
+/* Linha dourada */
 .card-team__gold-line {
   display: block;
-  width: 40px;
+  width: 30px;
   height: 2px;
   background-color: var(--color-gold);
-  margin: var(--space-3) auto;
+  margin-bottom: var(--space-2);
 }
 
+/* Cargo dentro do overlay */
 .card-team__role {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: var(--text-xs);
-  color: var(--color-gold);
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  margin-bottom: var(--space-3);
 }
 
+/* Corpo abaixo da foto (apenas para spec) */
+.card-team__body {
+  margin: var(--space-4) var(--space-4) var(--space-4);
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-gold);
+}
+
+/* Especialidade */
 .card-team__spec {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  font-style: italic;
+  line-height: 1.6;
+}
+
+.card-team__overlay .card-team__spec {
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: var(--space-2);
 }
 
 /* ============================================================
