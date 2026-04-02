@@ -110,4 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ===================================================
+     COPYRIGHT — atualiza ano automaticamente
+     =================================================== */
+  const yearEl = document.getElementById('copyright-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
 });
