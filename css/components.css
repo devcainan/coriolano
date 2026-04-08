@@ -32,7 +32,7 @@
 
 /* Logo */
 .header__logo {
-  display: none;
+  max-width: 140px;
 }
 
 .header__logo img {
