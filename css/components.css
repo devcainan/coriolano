@@ -32,11 +32,11 @@
 
 /* Logo */
 .header__logo {
-  max-width: 140px;
+  max-width: 150px;
 }
 
 .header__logo img {
-  height: 62px;
+  height: 82px;
   width: auto;
 }
 
